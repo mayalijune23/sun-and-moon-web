@@ -1,0 +1,114 @@
+
+*{
+    margin: 0%;
+    padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative; 
+  width: 100%;
+  max-width: 100%; 
+  height:100vh ;
+  margin: 0 auto;
+  overflow: hidden; 
+}
+
+.img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    animation: fadeBackground 12s infinite linear;
+}
+
+.img3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+
+.img2 {
+    position: absolute;
+    width: 150px;
+    z-index: 10;
+    animation: sunOrbit 12s infinite linear;
+}
+.img4 {
+    position: absolute;
+    width: 150px;
+    z-index: 10;
+    animation: moonOrbit 12s infinite linear;
+}
+
+@keyframes fadeBackground {
+    0%, 45% {
+        opacity: 1;
+    }
+    50%, 95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes sunOrbit {
+    0% {
+        left: 0%;
+        top: 50%;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    25% {
+        left: 45%;
+        top: 15%;
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    50% {
+        left: 95%;
+        top: 50%;
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+    50.01%, 100% {
+        left: 0%;
+        top: 50%;
+        opacity: 0;
+    }
+}
+
+/* 3. Moon Movement (6s to 12s) */
+@keyframes moonOrbit {
+    0%, 50% {
+        left: 0%;
+        top: 50%;
+        opacity: 0;
+    }
+    50.01% {
+        opacity: 1;
+    }
+    75% {
+        left: 45%;
+        top: 15%;
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        left: 95%;
+        top: 50%;
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
